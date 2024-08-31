@@ -5,6 +5,16 @@
     --primary-color: #067c80;
 }
 
+.title {
+
+    color: var(--primary-color);
+
+    & h1 {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+}
+
 /* common codes end */
 
 /* navbar section start */
@@ -44,15 +54,15 @@
 /* navbar section end */
 
 /* footer section start */
-#footer{
-    background: linear-gradient(rgba(10, 168, 173, 0.7),rgba(6, 124, 128, .7));
+#footer {
+    background: linear-gradient(rgba(10, 168, 173, 0.7), rgba(6, 124, 128, .7));
 }
 
-.footer-text p a{
+.footer-text p a {
     position: relative;
     transition: .5s;
 
-    &::after{
+    &::after {
         position: absolute;
         left: 0;
         bottom: -5px;
@@ -64,8 +74,28 @@
         width: 0;
     }
 
-    &:hover::after{
+    &:hover::after {
         width: 100%;
     }
 }
+
 /* footer section end */
+
+/* Homepage CSS Start */
+
+/* Band Details Section Start */
+.band-content {
+    border: 1px solid var(--primary-color);
+}
+
+/* Band Details Section End */
+
+/* Homepage CSS End */
+
+.feedback-card {
+    background: linear-gradient(to bottom, #007bff 35%, #ffffff 30%);
+    /* Change #007bff to your desired top color */
+    border-radius: 10px;
+    margin: ;
+
+}
