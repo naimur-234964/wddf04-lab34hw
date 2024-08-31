@@ -1,0 +1,71 @@
+/* common codes start */
+:root {
+    --light-color: #fff;
+    --dark-color: #000;
+    --primary-color: #067c80;
+}
+
+/* common codes end */
+
+/* navbar section start */
+#navbar .navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--dark-color);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    position: relative;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--primary-color);
+        content: "";
+        transition: width .15s ease-in-out;
+        width: 0;
+    }
+
+    &:hover::after,
+    &.active::after {
+        width: 100%;
+    }
+
+}
+
+/* navbar section end */
+
+/* footer section start */
+#footer{
+    background: linear-gradient(rgba(10, 168, 173, 0.7),rgba(6, 124, 128, .7));
+}
+
+.footer-text p a{
+    position: relative;
+    transition: .5s;
+
+    &::after{
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 3px;
+        background: var(--light-color);
+        content: "";
+        transition: width .5s ease-in-out;
+        width: 0;
+    }
+
+    &:hover::after{
+        width: 100%;
+    }
+}
+/* footer section end */
