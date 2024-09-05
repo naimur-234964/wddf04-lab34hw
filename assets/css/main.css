@@ -90,10 +90,18 @@
 
 /* Band Details Section End */
 
-/* Homepage CSS End */
-
+/* Feedback Section Start */
 .feedback-card {
     background: linear-gradient(to bottom, #007bff 35%, #ffffff 30%);
     /* Change #007bff to your desired top color */
     border-radius: 10px;
 }
+/* Feedback Section End */
+
+/* Homepage CSS End */
+
+/* About Us CSS Start */
+.row>* {
+    padding-left: 0;
+}
+/* About Us CSS End */
