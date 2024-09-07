@@ -23,7 +23,7 @@
     color: var(--primary-color);
 }
 
-.nav-link {
+/* .nav-link {
     color: var(--dark-color);
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
     position: relative;
@@ -49,6 +49,34 @@
         width: 100%;
     }
 
+} */
+
+.nav-link {
+    color: var(--dark-color);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    position: relative;
+    display: inline-block; /* Ensure the link is inline-block to match the text width */
+
+    &:hover {
+        color: var(--primary-color);
+    }
+
+    &::after {
+        position: absolute;
+        left: 50%; /* Start from the center */
+        bottom: 0;
+        transform: translateX(-50%); /* Center the underline */
+        height: 2px; /* Adjust the height for a thinner underline */
+        background: var(--primary-color);
+        content: "";
+        transition: width .15s ease-in-out;
+        width: 0;
+    }
+
+    &:hover::after,
+    &.active::after {
+        width: 100%; /* Extend to the full width of the text */
+    }
 }
 
 /* navbar section end */
